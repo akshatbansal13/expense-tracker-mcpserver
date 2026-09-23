@@ -24,3 +24,6 @@ expenses.db
 dist/
 build/
 *.egg-info/
+
+# Video Files
+*.mp4
