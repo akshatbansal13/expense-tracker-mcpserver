@@ -16,51 +16,34 @@ A Model Context Protocol (MCP) server for managing and tracking personal expense
 
 ## Installation & Setup (Claude Desktop)
 
-To use this server with Claude for Desktop, you need to add it to your configuration file.
+The modern way to add this server to Claude Desktop is by installing the packed `.mcpb` file.
 
-1. Open your Claude Desktop configuration:
-   - **Windows:** `%APPDATA%\Claude\claude_desktop_config.json`
-   - **macOS:** `~/Library/Application Support/Claude/claude_desktop_config.json`
-
-2. Add the following configuration (make sure to use the absolute path to your project):
-
-```json
-{
-  "mcpServers": {
-    "expense-tracker": {
-      "command": "uv",
-      "args": [
-        "--directory",
-        "C:\\Users\\aksha\\OneDrive\\Desktop\\expense-tracker-mcpserver",
-        "run",
-        "expense-tracker-mcpserver"
-      ]
-    }
-  }
-}
+1. **First, build the `.mcpb` package:**
+```bash
+mcpb pack . expense-tracker.mcpb
 ```
 
-3. Restart Claude Desktop. You should now see the expense tracker tools available!
+2. **Add to Claude Desktop:**
+   - Open the **Claude Desktop** application.
+   - Go to **Settings** (usually via the profile icon or menu).
+   - Navigate to the **Developer** or **MCP** section.
+   - Click **Add Server** (or **Install Server**).
+   - Choose to install from a file and select the `expense-tracker.mcpb` file you just generated.
+
+3. **Restart Claude Desktop** if prompted, and your expense tracker tools will be ready to use!
 
 ---
 
-## Building an MCPB Package
+## Building & Verification
 
-If you want to package the server into a standard `.mcpb` file for distribution, use the `mcpb` CLI.
+If you are modifying the server and want to verify your build:
 
 1. **Validate the manifest:**
 ```bash
 mcpb validate .
 ```
-*(Ensure it outputs "Manifest schema validation passes!")*
 
-2. **Pack the server into a `.mcpb` archive:**
-```bash
-mcpb pack . expense-tracker.mcpb
-```
-This will create a distributable file named `expense-tracker-0.1.0.mcpb`.
-
-3. **Verify the package info:**
+2. **Verify the packaged info:**
 ```bash
 mcpb info expense-tracker.mcpb
 ```
