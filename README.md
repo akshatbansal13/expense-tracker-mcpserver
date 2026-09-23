@@ -2,7 +2,7 @@
 
 ### Demo Video
 
-https://github.com/akshatbansal13/expense-tracker-mcpserver/blob/main/demo_video.mp4
+![Demo Video](./demo_video.gif)
 
 A Model Context Protocol (MCP) server for managing and tracking personal expenses. This server integrates directly with Claude Desktop, allowing the AI to add expenses to a local database and provide summaries.
 
