@@ -1,5 +1,7 @@
 # Expense Tracker MCP Server
 
+> **Demo Video:** [Insert link to your demo video here or upload a GIF/video file]
+
 A Model Context Protocol (MCP) server for managing and tracking personal expenses. This server integrates directly with Claude Desktop, allowing the AI to add expenses to a local database and provide summaries.
 
 ## Features
@@ -16,19 +18,17 @@ A Model Context Protocol (MCP) server for managing and tracking personal expense
 
 ## Installation & Setup (Claude Desktop)
 
-The modern way to add this server to Claude Desktop is by installing the packed `.mcpb` file.
+To add this server to Claude Desktop, you will need to install the `.mcpb` extension file.
 
-1. **First, build the `.mcpb` package:**
+1. **Build the `.mcpb` package:**
 ```bash
 mcpb pack . expense-tracker.mcpb
 ```
 
 2. **Add to Claude Desktop:**
    - Open the **Claude Desktop** application.
-   - Go to **Settings** (usually via the profile icon or menu).
-   - Navigate to the **Developer** or **MCP** section.
-   - Click **Add Server** (or **Install Server**).
-   - Choose to install from a file and select the `expense-tracker.mcpb` file you just generated.
+   - Go to **Settings** > **Extensions** > **Advanced Settings** > **Install Extension**.
+   - Select the `expense-tracker.mcpb` file you just generated.
 
 3. **Restart Claude Desktop** if prompted, and your expense tracker tools will be ready to use!
 
@@ -50,9 +50,11 @@ mcpb info expense-tracker.mcpb
 
 ---
 
-## Development
+## Credits
 
-To run the server locally for testing or development:
-```bash
-uv run expense-tracker-mcpserver
-```
+Created by **[Your Name]**.
+
+Connect with me:
+- **GitHub:** [@yourusername](https://github.com/yourusername)
+- **LinkedIn:** [Your Profile](https://linkedin.com/in/yourusername)
+- **Instagram:** [@yourusername](https://instagram.com/yourusername)
