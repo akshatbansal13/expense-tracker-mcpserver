@@ -27,3 +27,6 @@ build/
 
 # Video Files
 *.mp4
+
+# Build Artifacts
+*.mcpb
