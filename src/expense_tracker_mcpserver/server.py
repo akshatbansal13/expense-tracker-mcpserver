@@ -6,7 +6,6 @@ from typing import Literal
 import platformdirs
 import shutil
 
-# Use a safe user data directory for production (avoids read-only and wipe issues)
 DATA_DIR = platformdirs.user_data_dir("ExpenseTrackerMCP")
 os.makedirs(DATA_DIR, exist_ok=True)
 
@@ -37,7 +36,6 @@ def init_db():
                 note TEXT DEFAULT ''
             )
         """)
-        # Migration to add 'type' column for credits
         try:
             c.execute("ALTER TABLE expenses ADD COLUMN type TEXT DEFAULT 'expense'")
         except sqlite3.OperationalError:
